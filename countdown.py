@@ -9,19 +9,13 @@ for _t in range(test):
 
     c = 0
 
-    # start = time.time()
+    idx = [i for i, e in enumerate(a) if e == k]
+    for i in idx:
+        if cd == a[i:i+k]:
+            c += 1
     # for i in range(n-k+1):
     #     if a[i] == k and cd == a[i:i+k]:
     #         c += 1
-    # print(str(time.time()-start))
-    
-
-    c = 0
-
-    start = time.time()
-    for i in range(n-k+1):
-        if a[i] == k and cd == a[i:i+k]:
-            c += 1
-    print(str(time.time()-start))     
+            
 
     print("Case #{}: {}".format(_t+1, c))
